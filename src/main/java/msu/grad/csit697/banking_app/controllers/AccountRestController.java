@@ -44,7 +44,7 @@ public class AccountRestController {
         if (InputValidator.isSearchCriteriaValid(accountInput)) {
             // Attempt to retrieve the account information
             msu.grad.csit697.banking_app.models.Account account = accountService.getAccount(
-                    accountInput.getUniqueCode(), accountInput.getAccountNumber());
+                    accountInput.getSortCode(), accountInput.getAccountNumber());
 
             // Return the account details, or warn that no account was found for given input
             if (account == null) {

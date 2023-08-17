@@ -11,7 +11,7 @@ public class RandomCodeGenerator {
 
     public RandomCodeGenerator(){}
 
-    public String generateUniqueCode() {
+    public String generateSortCode() {
         return CodeGenerex.random();
     }
 

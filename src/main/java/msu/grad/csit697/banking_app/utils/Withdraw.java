@@ -4,7 +4,7 @@ import javax.validation.constraints.Positive;
 import java.util.Objects;
 
 public class Withdraw extends Account {
-    String uniqueCode;
+    String sortCode;
     String accountNumber;
 
     // Check the Transfer amount is Positive and not the negative number
@@ -12,7 +12,7 @@ public class Withdraw extends Account {
     private double amount;
 
     public Withdraw() {
-        this.uniqueCode = super.getUniqueCode();
+        this.sortCode = super.getSortCode();
         this.accountNumber = super.getAccountNumber();
     }
 
@@ -27,7 +27,7 @@ public class Withdraw extends Account {
     @Override
     public String toString() {
         return "AccountInput{" +
-                "uniqueCode='" + uniqueCode + '\'' +
+                "sortCode='" + sortCode + '\'' +
                 ", accountNumber='" + accountNumber + '\'' +
                 ", amount='" + amount + '\'' +
                 '}';
@@ -35,7 +35,7 @@ public class Withdraw extends Account {
 
     @Override
     public int hashCode() {
-        return Objects.hash(uniqueCode, accountNumber, amount);
+        return Objects.hash(sortCode, accountNumber, amount);
     }
 
 
@@ -44,7 +44,7 @@ public class Withdraw extends Account {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Withdraw that = (Withdraw) o;
-        return Objects.equals(uniqueCode, that.uniqueCode) &&
+        return Objects.equals(sortCode, that.sortCode) &&
                 Objects.equals(accountNumber, that.accountNumber) &&
                 Objects.equals(amount, that.amount);
     }

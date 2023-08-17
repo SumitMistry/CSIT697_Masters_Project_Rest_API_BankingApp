@@ -21,12 +21,12 @@ public class TransactionService {
 
     public boolean makeTransfer(Transaction transactionInput) {
         // TODO refactor synchronous implementation with messaging queue
-        String sourceSortCode = transactionInput.getSourceAccount().getUniqueCode();
+        String sourceSortCode = transactionInput.getSourceAccount().getSortCode();
         String sourceAccountNumber = transactionInput.getSourceAccount().getAccountNumber();
         Optional<Account> sourceAccount = accountRepository
                 .findBySortCodeAndAccountNumber(sourceSortCode, sourceAccountNumber);
 
-        String targetSortCode = transactionInput.getTargetAccount().getUniqueCode();
+        String targetSortCode = transactionInput.getTargetAccount().getSortCode();
         String targetAccountNumber = transactionInput.getTargetAccount().getAccountNumber();
         Optional<Account> targetAccount = accountRepository
                 .findBySortCodeAndAccountNumber(targetSortCode, targetAccountNumber);
@@ -36,8 +36,8 @@ public class TransactionService {
                 var transaction = new msu.grad.csit697.banking_app.models.Transaction();
 
                 transaction.setAmount(transactionInput.getAmount());
-                transaction.setSourceAccountId(sourceAccount.get().getId());
-                transaction.setTargetAccountId(targetAccount.get().getId());
+                transaction.setSourceAccountId(sourceAccount.get().getTransactionID());
+                transaction.setTargetAccountId(targetAccount.get().getTransactionID());
                 transaction.setTargetOwnerName(targetAccount.get().getOwnerName());
                 transaction.setInitiationDate(LocalDateTime.now());
                 transaction.setCompletionDate(LocalDateTime.now());

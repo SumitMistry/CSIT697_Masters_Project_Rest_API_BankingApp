@@ -26,7 +26,7 @@ public class AccountService {
 
         account.ifPresent(value ->
                 value.setTransactions(transactionRepository
-                        .findBySourceAccountIdOrderByInitiationDate(value.getId())));
+                        .findBySourceAccountIdOrderByInitiationDate(value.getTransactionID())));
 
         return account.orElse(null);
     }
@@ -40,7 +40,7 @@ public class AccountService {
 
     public Account createAccount(String bankName, String ownerName) {
         RandomCodeGenerator randomCodeGenerator = new RandomCodeGenerator();
-        Account newAccount = new Account(bankName, ownerName, randomCodeGenerator.generateUniqueCode(), randomCodeGenerator.generateAccountNumber(), 0.00);
+        Account newAccount = new Account(bankName, ownerName, randomCodeGenerator.generateSortCode(), randomCodeGenerator.generateAccountNumber(), 0.00);
         return accountRepository.save(newAccount);
     }
 }

@@ -21,11 +21,11 @@ class MakeTransferIntegrationTest {
     void givenTransactionDetails_whenMakeTransaction_thenVerifyTransactionIsProcessed() {
         // given
         var sourceAccount = new Account();
-        sourceAccount.setUniqueCode("53-68-92");
+        sourceAccount.setSortCode("53-68-92");
         sourceAccount.setAccountNumber("73084635");
 
         var targetAccount = new Account();
-        targetAccount.setUniqueCode("65-93-37");
+        targetAccount.setSortCode("65-93-37");
         targetAccount.setAccountNumber("21956204");
 
         var input = new Transaction();

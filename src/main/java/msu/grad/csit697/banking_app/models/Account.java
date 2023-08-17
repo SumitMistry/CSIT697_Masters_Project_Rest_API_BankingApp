@@ -13,7 +13,7 @@ import java.util.List;
 public class Account {
 
     @Id @GeneratedValue
-    private long id;
+    private long transactionID;
 
     private String sortCode;
 
@@ -36,7 +36,7 @@ public class Account {
         this.ownerName = ownerName;
     }
     public Account(long id, String sortCode, String accountNumber, double currentBalance, String bankName, String ownerName) {
-        this.id = id;
+        this.transactionID = id;
         this.sortCode = sortCode;
         this.accountNumber = accountNumber;
         this.currentBalance = currentBalance;
@@ -45,7 +45,7 @@ public class Account {
     }
 
     public Account(long id, String sortCode, String accountNumber, double currentBalance, String bankName, String ownerName, List<Transaction> transactions) {
-        this.id = id;
+        this.transactionID = id;
         this.sortCode = sortCode;
         this.accountNumber = accountNumber;
         this.currentBalance = currentBalance;
@@ -54,11 +54,11 @@ public class Account {
         this.transactions = transactions;
     }
 
-    public long getId() {
-        return id;
+    public long getTransactionID() {
+        return transactionID;
     }
-    public void setId(long id) {
-        this.id = id;
+    public void setTransactionID(long transactionID) {
+        this.transactionID = transactionID;
     }
     public String getSortCode() {
         return sortCode;
@@ -100,12 +100,12 @@ public class Account {
     @Override
     public String toString() {
         return "Account{" +
-                "id=" + id +
-                ", sortCode='" + sortCode + '\'' +
-                ", accountNumber='" + accountNumber + '\'' +
-                ", currentBalance=" + currentBalance +
-                ", bankName='" + bankName + '\'' +
-                ", ownerName='" + ownerName + '\'' +
+                "Transaction ID=" + transactionID +
+                ", Sort Code='" + sortCode + '\'' +
+                ", Account Number='" + accountNumber + '\'' +
+                ", Current Balance=" + currentBalance +
+                ", Bank Name='" + bankName + '\'' +
+                ", Account Owner Name='" + ownerName + '\'' +
                 '}';
     }
 }

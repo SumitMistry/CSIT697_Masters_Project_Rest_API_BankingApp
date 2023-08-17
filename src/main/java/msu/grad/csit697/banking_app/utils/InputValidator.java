@@ -5,7 +5,7 @@ import msu.grad.csit697.banking_app.config.stringPatterns;
 public class InputValidator {
 
     public static boolean isSearchCriteriaValid(Account account) {
-        return stringPatterns.UNIQUE_CODE_PATTERN.matcher(account.getUniqueCode()).find() &&
+        return stringPatterns.UNIQUE_CODE_PATTERN.matcher(account.getSortCode()).find() &&
                 stringPatterns.ACCOUNT_NUMBER_PATTERN.matcher(account.getAccountNumber()).find();
     }
 

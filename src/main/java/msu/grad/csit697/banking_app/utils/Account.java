@@ -6,18 +6,18 @@ import java.util.Objects;
 public class Account {
 
     @NotBlank(message = "Bank unique code is mandatory")
-    private String uniqueCode;
+    private String sortCode;
 
     @NotBlank(message = "Bank Account number is mandatory")
     private String accountNumber;
 
     public Account() {}
 
-    public String getUniqueCode() {
-        return uniqueCode;
+    public String getSortCode() {
+        return sortCode;
     }
-    public void setUniqueCode(String uniqueCode) {
-        this.uniqueCode = uniqueCode;
+    public void setSortCode(String sortCode) {
+        this.sortCode = sortCode;
     }
     public String getAccountNumber() {
         return accountNumber;
@@ -29,7 +29,7 @@ public class Account {
     @Override
     public String toString() {
         return "AccountInput{" +
-                "sortCode='" + uniqueCode + '\'' +
+                "sortCode='" + sortCode + '\'' +
                 ", accountNumber='" + accountNumber + '\'' +
                 '}';
     }
@@ -39,12 +39,12 @@ public class Account {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Account that = (Account) o;
-        return Objects.equals(uniqueCode, that.uniqueCode) &&
+        return Objects.equals(sortCode, that.sortCode) &&
                 Objects.equals(accountNumber, that.accountNumber);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(uniqueCode, accountNumber);
+        return Objects.hash(sortCode, accountNumber);
     }
 }

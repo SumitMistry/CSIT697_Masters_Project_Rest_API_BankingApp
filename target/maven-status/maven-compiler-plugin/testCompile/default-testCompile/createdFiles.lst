@@ -1,7 +1,0 @@
-com\example\paul\unit\TransactionServiceTest$TransactionServiceTestContextConfiguration.class
-com\example\paul\integration\MakeTransferIntegrationTest.class
-com\example\paul\unit\AccountRestControllerTest.class
-com\example\paul\unit\AccountServiceTest.class
-com\example\paul\unit\TransactionRestControllerTest.class
-com\example\paul\unit\TransactionServiceTest.class
-com\example\paul\integration\CheckBalanceIntegrationTest.class

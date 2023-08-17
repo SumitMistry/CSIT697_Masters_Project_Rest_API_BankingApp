@@ -61,7 +61,7 @@ public class TransactionRestController {
         if (InputValidator.isSearchCriteriaValid(withdraw)) {
             // Attempt to retrieve the account information
             Account account = accountService.getAccount(
-                    withdraw.getUniqueCode(), withdraw.getAccountNumber());
+                    withdraw.getSortCode(), withdraw.getAccountNumber());
 
             // Return the account details, or warn that no account was found for given input
             if (account == null) {
