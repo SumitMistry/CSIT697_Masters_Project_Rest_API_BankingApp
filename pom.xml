@@ -8,11 +8,11 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example.paul</groupId>
+	<groupId>package msu.grad.csit697.banking_app</groupId>
 	<artifactId>Banking</artifactId>
 	<version>0.0.1</version>
 	<name>Banking</name>
-	<description>Demo banking project for Spring Boot</description>
+	<description>CSIT-697 Master Project - Banking backend REST API </description>
 
 	<properties>
 		<java.version>17</java.version>

@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.example.paul.integration.CheckBalanceIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.221 s <<< FAILURE! - in com.example.paul.integration.CheckBalanceIntegrationTest
+givenAccountDetails_whenCheckingBalance_thenVerifyAccountCorrect  Time elapsed: 0.345 s  <<< ERROR!
+java.lang.ClassCastException: class java.lang.String cannot be cast to class com.example.paul.models.Account (java.lang.String is in module java.base of loader 'bootstrap'; com.example.paul.models.Account is in unnamed module of loader 'app')
+	at com.example.paul.integration.CheckBalanceIntegrationTest.givenAccountDetails_whenCheckingBalance_thenVerifyAccountCorrect(CheckBalanceIntegrationTest.java:31)
+
