@@ -20,15 +20,6 @@ https://www.jetbrains.com/idea/download/
 ```
 
 
-### DEMO
-```
-https://youtu.be/tzPDwVxGwd0
-```
-
-```
-https://drive.google.com/file/d/1gY7eF-1mnMB2akjBHoy_2be3RFNg2zI9/view?usp=drive_link
-```
-
 ## Running locally
 ```
 ./mvnw clean install -DskipTests=true
@@ -38,3 +29,14 @@ https://drive.google.com/file/d/1gY7eF-1mnMB2akjBHoy_2be3RFNg2zI9/view?usp=drive
 java -jar target/Banking-0.0.1.jar
 ```
 
+
+
+
+### App DEMO
+```
+https://youtu.be/tzPDwVxGwd0
+```
+
+```
+https://drive.google.com/file/d/1gY7eF-1mnMB2akjBHoy_2be3RFNg2zI9/view?usp=drive_link
+```
